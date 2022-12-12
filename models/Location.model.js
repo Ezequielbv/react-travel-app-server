@@ -7,20 +7,20 @@ const locationSchema = new Schema(
             required:   true
         },
         date:           Date,
-        userOwnerId:    {
-            type:       Schema.Types.ObjectId,
-            ref:        'User'
-        },
-        userOwnerName:  {
-            type:       Schema.Types.Mixed,
-            ref:        'User'
-        },
         coordinates:    [
             {
                 type:   Number
             }
-        ],
-        notes:  String
+        ]
+        // userOwnerId:    {
+        //     type:       Schema.Types.ObjectId,
+        //     ref:        'User'
+        // },
+        // userOwnerName:  {
+        //     type:       Schema.Types.Mixed,
+        //     ref:        'User'
+        // },
+        // notes:  String
     }
 )
 
