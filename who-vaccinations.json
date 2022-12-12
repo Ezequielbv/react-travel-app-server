@@ -119,5 +119,61 @@
         "Burundi": {
             "mandatory": [{"name": "Yellow fever ","details": "Proof of vaccination is required for all travellers aged 9 months or over."}],
             "recommendation": [{"name": "Malaria", "details": "Malaria risk due predominantly to P. falciparum exists throughout the year in the entire country. WHO recommended prevention type C."}]
+        },
+        "Cabo Verde": {
+            "mandatory": [{"name": "Yellow fever","details": "Proof of vaccination is required for travellers aged 1 year or over arriving from countries with risk of yellow fever transmission."}],
+            "recommendation": [{"name": "Malaria", "details": "Limited malaria risk due predominantly to P. falciparum exists from August through November in Santiago Island and in Boa Vista Island. WHO recommended prevention in risk areas: A."}]
+        },
+        "Cambodia": {
+            "mandatory": [{"name": "Yellow fever","details": "Proof of vaccination is required for travellers aged 1 year or over arriving from countries with risk of yellow fever transmission, and for travellers having transited for more than 12 hours through an airport of a country with risk of yellow fever transmission."}],
+            "recommendation": [{"name": "Malaria", "details": "Malaria risk due to P. falciparum and P. vivax exists throughout the year in forested rural areas. Phnom Penh and areas close to Tonle Sap (Siem Reap) are not at risk. Risk within the tourist area surrounding Angkor Wat is negligible. P. falciparum resistance to artesunate, mefloquine, lumefantrine, and piperaquine has been reported in western Cambodia and extends to the centre of the country. P. vivax resistance to chloroquine has been reported in eastern Cambodia. WHO recommended prevention in risk areas: C."}]
+        },
+        "Cameroon": {
+            "mandatory": [{"name": "Yellow fever","details": "Proof of vaccination is required for all travellers aged 1 year or over."}],
+            "recommendation": [{"name": "Malaria", "details": "Malaria risk due predominantly to P. falciparum exists throughout the year in the entire country. WHO recommended prevention: C."}]
+        },
+        "Canada": {
+            "mandatory": [{"name": "","details": ""}],
+            "recommendation": [{"name": "", "details": ""}]
+        },
+        "Central African Republic": {
+            "mandatory": [{"name": "Yellow fever","details": "Proof of vaccination is required for all travellers aged 9 months or over."}],
+            "recommendation": [{"name": "Malaria", "details": "Malaria risk due predominantly to P. falciparum exists throughout the year in the entire country. WHO recommended prevention: C."}]
+        },
+        "Chad": {
+            "mandatory": [{"name": "Yellow fever","details": "Proof of vaccination is required for travellers aged 9 months or over arriving from countries with risk of yellow fever transmission."}],
+            "recommendation": [{"name": "Malaria", "details": "Malaria risk due predominantly to P. falciparum exists throughout the year in the entire country. WHO recommended prevention: C."}]
+        },
+        "Chile": {
+            "mandatory": [{"name": "","details": ""}],
+            "recommendation": [{"name": "", "details": ""}]
+        },
+        "China": {
+            "mandatory": [{"name": "Yellow fever","details": "Proof of vaccination is required for travellers aged 9 months or over arriving from countries with risk of yellow fever transmission, and for travellers having transited for more than 12 hours through an airport of a country with risk of yellow fever transmission."}],
+            "recommendation": [{"name": "", "details": ""}]
+        },
+        "Colombia": {
+            "mandatory": [{"name": "Yellow fever","details": "Proof of vaccination is required for travellers aged 1 year or over arriving from Angola, Brazil, Democratic Republic of the Congo, and Uganda and for travellers having transited for more than 12 hours through an airport from the same countries."}],
+            "recommendation": [{"name": "Malaria", "details": "Malaria risk is high in some municipalities of the departments of Antioquia, Bolívar, Cauca, Chocó, Córdoba, La Guajira, Nariño, and Risaralda. Lower level risk is also present in some municipalities of Amazonas, Caqueta, Guaviare, Guainía, Meta, Norte de Santander, Putumayo, Vaupes, and Vichada. WHO recommended prevention in risk areas: C."}]
+        },
+        "Comoros": {
+            "mandatory": [{"name": "","details": ""}],
+            "recommendation": [{"name": "Malaria", "details": "Malaria risk due predominantly to P. falciparum exists throughout the year in the entire country. WHO recommended prevention: C."}] 
+        },
+        "Congo": {
+            "mandatory": [{"name": "Yellow fever","details": "Proof of vaccination is required for all travellers aged 9 months or over."}],
+            "recommendation": [{"name": "Malaria", "details": "Malaria risk due predominantly to P. falciparum exists throughout the year in the entire country. WHO recommended prevention: C."}]
+        },
+        "Cook Islands": {
+            "mandatory": [{"name": "","details": ""}],
+            "recommendation": [{"name": "", "details": ""}]
+        },
+        "Costa Rica": {
+            "mandatory": [{"name": "Yellow fever","details": "Proof of vaccination is required for travellers aged 9 months or over arriving from countries with risk of yellow fever transmission, with the addition of Tanzania and Zambia in the African region; the exception of Argentina and Panama in the Americas; and the following specifications for the following countries: Colombia (the entire country except Bogotá (the capital), Barranquilla, Cali, Cartagena, Medellín, and San Andrés Providencia); Ecuador (applies only to MoronaSantiago, Napo, Orellana, Pastaza, Sucumbíos, and Zamora-Chinchipe); Paraguay (the entire country except Asunción (the capital)); Peru (the entire country except Lima (the capital), Cajamarca, Cuzco, Lambayeque, Machu Picchu, Ruta de los Incas, Piura, Tumbes); Trinidad and Tobago (the entire country except the urban areas of Port of Spain (the capital), and for travellers in transit or whose itineraries are limited to the island of Tobago)."}],
+            "recommendation": [{"name": "Malaria", "details": "Very low malaria risk was historically due almost exclusively to P. vivax. Negligible or no risk of malaria transmission exists in the country. WHO recommended prevention in risk areas: A."}]
+        },
+        "Côte d'Ivoire": {
+            "mandatory": [{"name": "Yellow fever","details": "Proof of vaccination is required for all travellers aged 9 months or over."}],
+            "recommendation": [{"name": "Malaria", "details": "Malaria risk due predominantly to P. falciparum exists throughout the year in the entire country. WHO recommended prevention: C."}]
         }    
 }
