@@ -1,21 +1,35 @@
 const express = require("express");
 const router = express.Router();
-const Location = require('../models/Location.model')
+const Location = require('../models/Location.model');
+const User = require('../models/User.model');
 
 router.get("/", (req, res, next) => {
   res.json("All good in here");
 });
 
 router.post("/form", (req, res, next) => {
-  const { city, country, date, coordinates } = req.body;
-  console.log({ city, country, date, coordinates });
+  const { city, country, date, coordinates, user } = req.body;
+  console.log({ city, country, date, coordinates, user });
 
   // Check the users collection if a user with the same email already exists
   Location.create({ city, country, date, coordinates })
     .then((location) => {
-      console.log("loc ", location);
+      /*  console.log("loc ", location); */
       res.status(201).json({ location: location });
+      return location
     })
+    .then((location) => {
+     const person = User.findByIdAndUpdate(user._id, { location: location._id });
+     return person;  
+    })
+    .then((person) => {
+      person.populate('location').exec(function (err, person) {
+        if (err) return handleError(err);
+        console.log(person);
+      });
+      return person
+    })
+    .then((person) => console.log(person))
     .catch((err) => next(err)); // In this case, we send error handling to the error handling middleware.
 });
 
