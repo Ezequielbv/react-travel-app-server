@@ -7,7 +7,19 @@ router.get("/", (req, res, next) => {
   res.json("All good in here");
 });
 
-router.post("/form", async (req, res, next) => {
+
+router.get('/profile', (req, res, next) => {
+  Location.find()
+    .then(location => {
+      console.log(location);
+      res.status(201).json({ location: location })
+      return location
+    })
+    // .then((loc) => console.log(loc))
+    .catch(err => console.log(err));
+});
+
+router.post("/form", (req, res, next) => {
   const { city, country, date, coordinates, user } = req.body;
   console.log("Request is:", {city, country, date, coordinates, user})
   try {
