@@ -1,11 +1,12 @@
-const express = require("express");
-const router = express.Router();
-const Location = require('../models/Location.model');
-const User = require('../models/User.model');
+const router    = express.Router();
+const express   = require("express");
+const Location  = require('../models/Location.model');
+const User      = require('../models/User.model');
 
 router.get("/", (req, res, next) => {
   res.json("All good in here");
 });
+
 
 router.get('/profile', (req, res, next) => {
   Location.find()
@@ -20,28 +21,28 @@ router.get('/profile', (req, res, next) => {
 
 router.post("/form", (req, res, next) => {
   const { city, country, date, coordinates, user } = req.body;
-  console.log({ city, country, date, coordinates, user });
-
-  // Check the users collection if a user with the same email already exists
-  Location.create({ city, country, date, coordinates })
-    .then((location) => {
-      /*  console.log("loc ", location); */
-      res.status(201).json({ location: location });
-      return location
-    })
-    .then((location) => {
-     const person = User.findByIdAndUpdate(user._id, { location: location._id });
-     return person;  
-    })
-    .then((person) => {
-      person.populate('location').exec(function (err, person) {
-        if (err) return handleError(err);
-        console.log(person);
-      });
-      return person
-    })
-    .then((person) => console.log(person))
-    .catch((err) => next(err)); // In this case, we send error handling to the error handling middleware.
+  console.log("Request is:", {city, country, date, coordinates, user})
+  try {
+    const location = await Location.create({ city, country, date, coordinates });
+    console.log("Location is: ", location)
+    const person = await User.findByIdAndUpdate(user._id, { location: location._id });
+    person.populated('location');
+    console.log(person)
+    res.status(201).json({ location: location });
+  }
+  catch(error) {
+    console.log(error);
+  }
 });
+
+router.get('/user-coordinates', (req, res, next) => {
+  Location.find()
+  .then(coordinates => {
+    res.status(201).json({ coordinates: coordinates });
+    return coordinates
+  })
+  .catch(err => console.log(err));
+});
+
 
 module.exports = router;
