@@ -7,11 +7,11 @@ router.get("/", (req, res, next) => {
 });
 
 router.post("/form", (req, res, next) => {
-  const { city, date, coordinates } = req.body;
-  console.log({ city, date, coordinates });
+  const { city, country, date, coordinates } = req.body;
+  console.log({ city, country, date, coordinates });
 
   // Check the users collection if a user with the same email already exists
-  Location.create({ city, date, coordinates })
+  Location.create({ city, country, date, coordinates })
     .then((location) => {
       console.log("loc ", location);
       res.status(201).json({ location: location });
