@@ -19,7 +19,7 @@ router.get('/profile', (req, res, next) => {
     .catch(err => console.log(err));
 });
 
-router.post("/form", (req, res, next) => {
+router.post("/form", async (req, res, next) => {
   const { city, country, date, coordinates, user } = req.body;
   console.log("Request is:", {city, country, date, coordinates, user})
   try {
