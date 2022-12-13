@@ -1,7 +1,8 @@
-const router    = express.Router();
 const express   = require("express");
+const router    = express.Router();
 const Location  = require('../models/Location.model');
 const User      = require('../models/User.model');
+
 
 router.get("/", (req, res, next) => {
   res.json("All good in here");
