@@ -23,6 +23,10 @@ const userSchema = new Schema(
           type:   String
       }
     ],
+    location: {
+      type: Schema.Types.ObjectId,
+      ref:  'Location'
+    },
     // this second object adds extra properties: `createdAt` and `updatedAt`
     timestamps: {
       type: Boolean,
