@@ -14,16 +14,16 @@ const locationSchema = new Schema(
             {
                 type:   Number
             }
-        ]
-        // userOwnerId:    {
-        //     type:       Schema.Types.ObjectId,
-        //     ref:        'User'
-        // },
-        // userOwnerName:  {
-        //     type:       Schema.Types.Mixed,
-        //     ref:        'User'
-        // },
-        // notes:  String
+        ],
+        userOwnerId:    {
+            type:       Schema.Types.ObjectId,
+            ref:        'User'
+        },
+        userOwnerName:  {
+            type:       Schema.Types.Mixed,
+            ref:        'User'
+        },
+        notes:  String
     }
 )
 
