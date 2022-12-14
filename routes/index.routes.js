@@ -1,7 +1,9 @@
 const express   = require("express");
+const mongoose = require("mongoose");
 const router    = express.Router();
 const Location  = require('../models/Location.model');
 const User      = require('../models/User.model');
+const Note      = require('../models/Note.model');
 
 
 router.get("/", (req, res, next) => {
@@ -37,9 +39,28 @@ router.post("/form", async (req, res, next) => {
 });
 
 
+
+//  GET /api/projects/:projectId -  Retrieves a specific project by id
+router.get("/locations/:locationId", (req, res, next) => {
+  const { locationId } = req.params;
+
+  if (!mongoose.Types.ObjectId.isValid(locationId)) {
+    res.status(400).json({ message: "Specified id is not valid" });
+    return;
+  }
+
+  // Each Location document has `notes` array holding `_id`s of Note documents
+  // We use .populate() method to get swap the `_id`s for the actual Note documents
+  Location.findById(locationId)
+    .populate("notes")
+    .then((location) => res.status(200).json(location))
+    .catch((error) => res.json(error));
+});
+
 // DELETE A LOCATION
 router.delete('/locations/:locationId', (req, res, next) => {
   const { locationId } = req.params;
+  // console.log("HERE BE", locationId);
 
   if (!mongoose.Types.ObjectId.isValid(locationId)) {
     res.status(400).json({ message: "Specified id is not valid" });
@@ -49,7 +70,7 @@ router.delete('/locations/:locationId', (req, res, next) => {
   Location.findByIdAndRemove(locationId)
   .then(() =>
       res.json({
-        message: `Location ${projectId} is removed successfully.`,
+        message: `Location ${locationId} is removed successfully.`,
       })
     )
     .catch((error) => res.json(error));
