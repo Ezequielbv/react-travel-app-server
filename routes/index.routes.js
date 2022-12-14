@@ -44,4 +44,23 @@ router.post("/form", (req, res, next) => {
     .catch((err) => next(err)); // In this case, we send error handling to the error handling middleware.
 });
 
+
+// DELETE A LOCATION
+router.delete('/locations/:locationId', (req, res, next) => {
+  const { locationId } = req.params;
+
+  if (!mongoose.Types.ObjectId.isValid(locationId)) {
+    res.status(400).json({ message: "Specified id is not valid" });
+    return;
+  }
+
+  Location.findByIdAndRemove(locationId)
+  .then(() =>
+      res.json({
+        message: `Location ${projectId} is removed successfully.`,
+      })
+    )
+    .catch((error) => res.json(error));
+});
+
 module.exports = router;
