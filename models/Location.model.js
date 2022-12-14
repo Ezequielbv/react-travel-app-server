@@ -23,7 +23,7 @@ const locationSchema = new Schema(
             type:       Schema.Types.Mixed,
             ref:        'User'
         },
-        notes:  String
+        notes: [{ type: Schema.Types.ObjectId, ref: "Note" }],
     }
 )
 
