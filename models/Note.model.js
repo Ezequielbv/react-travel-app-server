@@ -2,10 +2,11 @@ const { Schema, model } = require("mongoose");
 
 const noteSchema = new Schema(
     {
-        city: {
-            type:       Schema.Types.ObjectId,
-            ref:        'Location'
-        },
+        // city: {
+        //     type:       Schema.Types.ObjectId,
+        //     ref:        'Location'
+        // },
+        title: String,
         description: {
             type:       String,
             required:   true
