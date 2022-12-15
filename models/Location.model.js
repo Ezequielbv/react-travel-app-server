@@ -19,10 +19,6 @@ const locationSchema = new Schema(
             type:       Schema.Types.ObjectId,
             ref:        'User'
         },
-        userOwnerName:  {
-            type:       Schema.Types.Mixed,
-            ref:        'User'
-        },
         notes:  String
     }
 )
